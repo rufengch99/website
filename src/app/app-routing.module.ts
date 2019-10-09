@@ -9,7 +9,15 @@ const routes: Routes = [
     path: '',
     component: MainComponent,
     children: [
-
+      {
+        path: '',
+        redirectTo: 'dashboard/default',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dashboard',
+        loadChildren: './modules/dashboard/dashboard.module#DashboardModule'
+      },
     ]
   },
   {

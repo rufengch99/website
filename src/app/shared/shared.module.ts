@@ -12,20 +12,20 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
-@NgModule({
-  declarations: [
-    TitleComponent,
-    SpinnerComponent
-  ],
+@NgModule({  
   imports: [
     CommonModule,
-    NgbModule,
+    NgbModule.forRoot(),
     HttpClientModule,
     PerfectScrollbarModule,
     ClickOutsideModule
   ],
   exports: [
     NgbModule,
+    TitleComponent,
+    SpinnerComponent
+  ],
+  declarations: [
     TitleComponent,
     SpinnerComponent
   ],

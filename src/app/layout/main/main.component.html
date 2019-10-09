@@ -13,8 +13,8 @@
      [attr.sidebar-img-type]="sidebarImgType"
      [attr.layout-type]="layoutType"
      (window:resize)="onResize($event)" >
-     <div class="pcoded-overlay-box"></div>
-     <div class="pcoded-container navbar-wrapper">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
         <nav class="navbar header-navbar pcoded-header" [attr.header-theme]="headerTheme" [attr.pcoded-header-position]="pcodedHeaderPosition">
             <div class="navbar-wrapper">
                 <div class="navbar-logo">
@@ -255,5 +255,24 @@
                 </div>
             </div>
         </nav>
-    </div>
+
+        <div class="pcoded-main-container" [style.margin-top]="headerFixedMargin">
+            <div class="pcoded-wrapper">
+                <nav id="main_navbar" 
+                    class="pcoded-navbar"
+                    (clickOutside)="onClickedOutsideSidebar($event)"
+                    [exclude]="'#mobile-collapse'"
+                    [attr.navbar-theme]="navBarTheme"
+                    [attr.active-item-theme]="activeItemTheme"
+                    sub-item-theme="theme2"
+                    active-item-style="style0"
+                    [attr.pcoded-header-position]="pcodedHeaderPosition"
+                    [attr.pcoded-navbar-position]="pcodedSidebarPosition"
+                    [style.top]="headerFixedTop"
+                    [style.height]="sidebarFixedNavHeight"
+                    (mouseleave)="hoverOutsideSidebar()" >
+                </nav>
+            </div>
+        </div>
+    </div>    
 </div>

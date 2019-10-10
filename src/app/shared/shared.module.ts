@@ -39,7 +39,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 		ModalBasicComponent,
 		CardComponent,
 		ClickOutsideModule,
-		DataFilterPipe
+		DataFilterPipe,
+		PerfectScrollbarModule
 	],
 	declarations: [
 		TitleComponent,
